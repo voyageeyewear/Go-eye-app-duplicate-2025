@@ -6,8 +6,8 @@ Your GoEye Flutter app has been successfully deployed to Vercel!
 
 ### 🌐 **Live URLs**:
 
-- **Production**: https://go-eye-app-duplicate-2025-2t5j40sng-voyageeyewears-projects.vercel.app
-- **Inspect**: https://vercel.com/voyageeyewears-projects/go-eye-app-duplicate-2025/GqMXWV2DjxXcwpSxtNXAPTaPHpwi
+- **Production**: https://go-eye-app-duplicate-2025-5mv74fdmo-voyageeyewears-projects.vercel.app
+- **Inspect**: https://vercel.com/voyageeyewears-projects/go-eye-app-duplicate-2025/DU5c6Q9vT3uM5uQ7buztvxBRV7ts
 
 ### 📁 **Project Details**:
 - **Project Name**: go-eye-app-duplicate-2025
@@ -57,10 +57,10 @@ Your GoEye Flutter app has been successfully deployed to Vercel!
 - **Auto-deploy**: On every push to main branch
 
 ### 📱 **Mobile App Sync**:
-- **Local Server**: Still running on port 8082
-- **IP Address**: 192.168.0.104
+- **Vercel API**: https://go-eye-app-duplicate-2025-5mv74fdmo-voyageeyewears-projects.vercel.app/api/customizations
 - **Sync Interval**: Every 5 seconds
 - **APK Location**: `/build/app/outputs/flutter-apk/app-release.apk`
+- **Status**: ✅ Now syncing with live Vercel deployment
 
 ### 🎯 **Next Steps**:
 
@@ -72,7 +72,7 @@ Your GoEye Flutter app has been successfully deployed to Vercel!
 ### 🔗 **Useful Links**:
 - **Vercel Dashboard**: https://vercel.com/voyageeyewears-projects/go-eye-app-duplicate-2025
 - **GitHub Repository**: https://github.com/voyageeyewear/Go-eye-app-duplicate-2025
-- **Local Development**: http://192.168.0.104:8082
+- **API Endpoint**: https://go-eye-app-duplicate-2025-5mv74fdmo-voyageeyewears-projects.vercel.app/api/customizations
 
 ### 🎉 **Success!**
 Your GoEye app is now live on the internet and accessible to users worldwide!

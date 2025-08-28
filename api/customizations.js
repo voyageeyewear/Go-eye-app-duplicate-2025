@@ -17,15 +17,20 @@ try {
 }
 
 export default function handler(req, res) {
-  // Enable CORS
+  // Enable CORS for all origins
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Max-Age', '86400');
 
+  // Handle preflight requests
   if (req.method === 'OPTIONS') {
     res.status(200).end();
     return;
   }
+
+  // Add some basic logging
+  console.log(`${req.method} ${req.url} - ${req.headers['user-agent'] || 'Unknown'}`);
 
   if (req.method === 'GET') {
     console.log('🌐 API GET /api/customizations - Returning data');
