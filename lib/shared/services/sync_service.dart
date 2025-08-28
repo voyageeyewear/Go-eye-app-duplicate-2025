@@ -7,7 +7,7 @@ import '../providers/header_customization_provider.dart';
 
 class SyncService {
   // Use your computer's IP address instead of localhost for mobile app
-  static const String _baseUrl = 'http://192.168.0.104:8082'; // Your computer's actual IP
+  static const String _baseUrl = 'https://go-eye-app-duplicate-2025.vercel.app'; // Your computer's actual IP
   static const String _syncEndpoint = '/api/customizations';
   static const Duration _syncInterval = Duration(seconds: 5); // Sync every 5 seconds
   

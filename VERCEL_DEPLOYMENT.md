@@ -6,8 +6,8 @@ Your GoEye Flutter app has been successfully deployed to Vercel!
 
 ### 🌐 **Live URLs**:
 
-- **Production**: https://go-eye-app-duplicate-2025-6rnhle2mw-voyageeyewears-projects.vercel.app
-- **Inspect**: https://vercel.com/voyageeyewears-projects/go-eye-app-duplicate-2025/7ZTD9shoYJJTwjvD1vrt4qvNxFms
+- **Production**: https://go-eye-app-duplicate-2025-2t5j40sng-voyageeyewears-projects.vercel.app
+- **Inspect**: https://vercel.com/voyageeyewears-projects/go-eye-app-duplicate-2025/GqMXWV2DjxXcwpSxtNXAPTaPHpwi
 
 ### 📁 **Project Details**:
 - **Project Name**: go-eye-app-duplicate-2025
