@@ -1,5 +1,6 @@
-# Flutter build artifacts
+# Flutter build artifacts (but keep web build)
 build/
+!build/web/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -65,6 +66,6 @@ test_sync.py
 test_mobile_connection.py
 customization_data.json
 
-# Documentation (optional)
+# Documentation
 *.md
 !README.md
