@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:video_player/video_player.dart';
 import '../../../../shared/providers/header_customization_provider.dart';
+import '../../../../shared/services/sync_service.dart';
 
 
 class HomeScreen extends ConsumerWidget {
@@ -19,7 +20,7 @@ class HomeScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Header
-              _buildHeader(state),
+              _buildHeader(state, ref),
               
               // Promotional Banner
               if (state.showPromotionalBanner) _buildPromotionalBanner(state),
@@ -77,7 +78,7 @@ class HomeScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildHeader(HeaderCustomizationState state) {
+  Widget _buildHeader(HeaderCustomizationState state, WidgetRef ref) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       color: state.headerBackgroundColor,
@@ -151,7 +152,31 @@ class HomeScreen extends ConsumerWidget {
           const SizedBox(width: 8),
           _buildActionIcon(Icons.person_outline, state),
           const SizedBox(width: 8),
-                          _buildActionIcon(Icons.shopping_cart_outlined, state),
+          _buildActionIcon(Icons.shopping_cart_outlined, state),
+          const SizedBox(width: 8),
+          // Debug sync button
+          GestureDetector(
+            onTap: () async {
+              final syncService = SyncService();
+              await syncService.forceSync();
+              
+              // Also force refresh the provider
+              ref.read(headerCustomizationProvider.notifier).forceRefresh();
+            },
+            child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.green.withValues(alpha: 0.8),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(
+                Icons.sync,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+          ),
         ],
       ),
     );

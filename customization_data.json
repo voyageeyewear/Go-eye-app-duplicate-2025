@@ -1,218 +1,200 @@
 {
   "showPromotionalBanner": true,
-  "promotionalBannerText": "\ud83c\udf89 FREE LENS with every frame!",
+  "promotionalBannerText": "\ud83d\udd25 HOT DEAL: 70% Off on All Frames! Limited Time!",
   "promotionalBannerBackgroundColor": 4294198070,
-  "promotionalBannerTextColor": 4278190080,
-  "promotionalBannerFontSize": 16,
+  "promotionalBannerTextColor": 4294967295,
+  "promotionalBannerFontSize": 16.0,
   "promotionalBannerFontFamily": "Roboto",
-  "headerBackgroundColor": 4280166970,
-  "headerTextColor": 4294967295,
-  "headerIconColor": 4294967295,
-  "headerIconSize": 24,
+  "headerBackgroundColor": 4294967295,
+  "headerTextColor": 4278190080,
+  "headerIconColor": 4278190080,
+  "headerIconSize": 24.0,
   "showHeaderLogo": true,
   "showHeaderIcons": true,
-  "collectionsSectionTitle": "\ud83d\udd25 HOT COLLECTIONS",
-  "collectionsSectionTitleFontSize": 24,
+  "collectionsSectionTitle": "\ud83d\udd25 HOT Collections",
+  "collectionsSectionTitleFontSize": 20.0,
   "collectionsSectionTitleFontFamily": "Roboto",
   "collections": [
     {
-      "id": "collection1",
-      "title": "Ms fierceness...",
-      "subtitle": "Fierce and bold eyewear for the confident woman",
-      "imagePath": "https://goeye.in/cdn/shop/files/air_banner_1.jpg?v=1750422574&width=440",
+      "id": "1",
+      "title": "\ud83d\udd25 Summer Collection UPDATED",
+      "subtitle": "\ud83d\udd25 Trendy frames for sunny days - UPDATED!",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop",
       "isVisible": true
     },
     {
-      "id": "1756358431117",
-      "title": "NEw",
-      "subtitle": "",
-      "imagePath": "https://goeye.in/cdn/shop/files/air_banner_1.jpg?v=1750422574&width=440",
+      "id": "2",
+      "title": "Classic Frames",
+      "subtitle": "Timeless elegance",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "title": "Sport Edition",
+      "subtitle": "Active lifestyle frames",
+      "imagePath": "https://images.unsplash.com/photo-1556306535-38febf6782e7?w=300&h=200&fit=crop",
       "isVisible": true
     }
   ],
-  "productCategoriesSectionTitle": "Product Categories",
-  "productCategoriesSectionTitleFontSize": 24,
+  "productCategoriesSectionTitle": "Categories",
+  "productCategoriesSectionTitleFontSize": 20.0,
   "productCategoriesSectionTitleFontFamily": "Roboto",
-  "productCategories": [],
+  "productCategories": [
+    {
+      "id": "1",
+      "label": "Men",
+      "icon": 128104,
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "label": "Women",
+      "icon": 128105,
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "label": "Kids",
+      "icon": 128512,
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "label": "Essentials",
+      "icon": 128717,
+      "isVisible": true
+    }
+  ],
   "showProductCategoryCards": true,
-  "productCategoryCardsTitle": "Eyeglasses & Sunglasses",
-  "productCategoryCardsTitleFontSize": 24,
+  "productCategoryCardsTitle": "Eyeglasses",
+  "productCategoryCardsTitleFontSize": 18.0,
   "productCategoryCardsTitleFontFamily": "Roboto",
   "eyeglassesCategoryCards": [
     {
-      "id": "eyeglasses_1756358461150",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "1",
+      "title": "Round Frames",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop",
       "isVisible": true
     },
     {
-      "id": "eyeglasses_1756358468340",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "2",
+      "title": "Square Frames",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop",
       "isVisible": true
     },
     {
-      "id": "eyeglasses_1756358472706",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
-      "isVisible": true
-    },
-    {
-      "id": "eyeglasses_1756358477462",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "3",
+      "title": "Cat Eye",
+      "imagePath": "https://images.unsplash.com/photo-1556306535-38febf6782e7?w=150&h=100&fit=crop",
       "isVisible": true
     }
   ],
   "sunglassesCategoryCards": [
     {
-      "id": "sunglasses_1756358482784",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "1",
+      "title": "Aviator",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop",
       "isVisible": true
     },
     {
-      "id": "sunglasses_1756358486179",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "2",
+      "title": "Wayfarer",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop",
       "isVisible": true
     },
     {
-      "id": "sunglasses_1756358491407",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
-      "isVisible": true
-    },
-    {
-      "id": "sunglasses_1756358498979",
-      "title": "New",
-      "icon": 58513,
-      "imagePath": "https://goeye.in/cdn/shop/files/men.jpg?v=1750675041",
+      "id": "3",
+      "title": "Round",
+      "imagePath": "https://images.unsplash.com/photo-1556306535-38febf6782e7?w=150&h=100&fit=crop",
       "isVisible": true
     }
   ],
-  "eyeglassesSectionFontSize": 24,
+  "eyeglassesSectionFontSize": 18.0,
   "eyeglassesSectionFontFamily": "Roboto",
+  "sunglassesSectionFontSize": 18.0,
+  "sunglassesSectionFontFamily": "Roboto",
   "showVideoCarousel": true,
-  "videoCarouselTitle": "Watch our story",
-  "videoCarouselSubtitle": "Discover our journey",
-  "videoCarouselTitleFontSize": 24,
+  "videoCarouselTitle": "Featured Videos",
+  "videoCarouselTitleFontSize": 18.0,
   "videoCarouselTitleFontFamily": "Roboto",
-  "videoCarouselSubtitleFontSize": 16,
-  "videoCarouselSubtitleFontFamily": "Roboto",
-  "videos": [
+  "videoCarouselVideos": [
     {
-      "id": "1756358522631",
-      "title": "NEw",
-      "videoUrl": "https://cdn.shopify.com/videos/c/o/v/ac101f7fd45445e7892937c8853b310d.mp4",
-      "isVisible": true
-    },
-    {
-      "id": "1756358527922",
-      "title": "New",
-      "videoUrl": "https://cdn.shopify.com/videos/c/o/v/ac101f7fd45445e7892937c8853b310d.mp4",
-      "isVisible": true
-    },
-    {
-      "id": "1756358531537",
-      "title": "New",
-      "videoUrl": "https://cdn.shopify.com/videos/c/o/v/ac101f7fd45445e7892937c8853b310d.mp4",
+      "id": "1",
+      "title": "How to Choose Perfect Frames",
+      "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop",
+      "videoUrl": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
       "isVisible": true
     }
   ],
-  "showTodaysMoodSection": true,
-  "todaysMoodTitle": "Today's mood",
-  "todaysMoodSubtitle": "Discover every look, for every style",
-  "todaysMoodTitleFontSize": 24,
-  "todaysMoodTitleFontFamily": "Cursive",
-  "todaysMoodSubtitleFontSize": 16,
-  "todaysMoodSubtitleFontFamily": "Roboto",
-  "todaysMoodButtonText": "Look",
-  "todaysMoodButtonFontSize": 14,
-  "todaysMoodButtonColor": 4281545523,
-  "todaysMoodMenTitle": "Men",
-  "todaysMoodWomenTitle": "Women",
-  "mensCategoryCardColor": 4293322490,
-  "womensCategoryCardColor": 4294960353,
-  "mensStyleCards": [
+  "showTodaysMood": true,
+  "todaysMoodTitle": "Today's Mood",
+  "todaysMoodTitleFontSize": 18.0,
+  "todaysMoodTitleFontFamily": "Roboto",
+  "todaysMoodItems": [
     {
-      "id": "mens_style1",
-      "title": "CEO Look",
-      "imagePath": "https://goeye.in/cdn/shop/files/men_1_1_600x600_crop_center.jpg?v=1750832692",
+      "id": "1",
+      "title": "Confident",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop",
       "isVisible": true
     },
     {
-      "id": "1756358568790",
-      "title": "New",
-      "imagePath": "https://goeye.in/cdn/shop/files/men_1_1_600x600_crop_center.jpg?v=1750832692",
+      "id": "2",
+      "title": "Casual",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       "isVisible": true
     }
   ],
-  "womensStyleCards": [
-    {
-      "id": "womens_style1",
-      "title": "Boss Lady",
-      "imagePath": "https://goeye.in/cdn/shop/files/men_1_1_600x600_crop_center.jpg?v=1750832692",
-      "isVisible": true
-    },
-    {
-      "id": "1756358574010",
-      "title": "New",
-      "imagePath": "https://goeye.in/cdn/shop/files/men_1_1_600x600_crop_center.jpg?v=1750832692",
-      "isVisible": true
-    }
-  ],
-  "showMostLovedSection": true,
+  "showMostLoved": true,
   "mostLovedTitle": "Most Loved",
-  "mostLovedSubtitle": "Customers favourite listed every 15 days",
-  "mostLovedTitleFontSize": 24,
+  "mostLovedTitleFontSize": 18.0,
   "mostLovedTitleFontFamily": "Roboto",
-  "mostLovedSubtitleFontSize": 16,
-  "mostLovedSubtitleFontFamily": "Roboto",
-  "mostLovedProducts": [
+  "mostLovedItems": [
     {
-      "id": "product1",
-      "title": "RICKER",
-      "imagePath": "https://goeye.in/cdn/shop/files/VICTOR_1200x.png?v=1750679985",
+      "id": "1",
+      "title": "Premium Aviator",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop",
       "isVisible": true
     },
     {
-      "id": "1756358602038",
-      "title": "New",
-      "imagePath": "https://goeye.in/cdn/shop/files/VICTOR_1200x.png?v=1750679985",
+      "id": "2",
+      "title": "Classic Round",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       "isVisible": true
     }
   ],
   "showInstagramShowcase": true,
-  "instagramShowcaseTitle": "Follow Us",
-  "instagramShowcaseSubtitle": "Stay updated with our latest collections and offers",
-  "instagramShowcaseTitleFontSize": 24,
+  "instagramShowcaseTitle": "Instagram Showcase",
+  "instagramShowcaseTitleFontSize": 18.0,
   "instagramShowcaseTitleFontFamily": "Roboto",
-  "instagramShowcaseSubtitleFontSize": 16,
-  "instagramShowcaseSubtitleFontFamily": "Roboto",
-  "instagramItems": [
+  "instagramShowcaseItems": [
     {
-      "id": "1756358631453",
-      "title": "NEw",
-      "imagePath": null,
-      "videoUrl": "https://cdn.shopify.com/videos/c/o/v/40e1306b7040435f9dc86f6052946b4f.mp4",
-      "itemType": "video",
+      "id": "1",
+      "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "imagePath": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       "isVisible": true
     }
   ],
   "showVideoCategories": true,
   "videoCategoriesTitle": "Video Categories",
-  "videoCategoriesSubtitle": "Explore our video content by category",
-  "videoCategoriesTitleFontSize": 24,
+  "videoCategoriesTitleFontSize": 18.0,
   "videoCategoriesTitleFontFamily": "Roboto",
-  "videoCategoriesSubtitleFontSize": 16,
-  "videoCategoriesSubtitleFontFamily": "Roboto",
-  "videoCategories": []
+  "videoCategories": [
+    {
+      "id": "1",
+      "title": "Style Tips",
+      "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "title": "Care Guide",
+      "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop",
+      "isVisible": true
+    }
+  ]
 }

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEye Customization Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #f1f2f6;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        
+        .section h3 {
+            color: #2f3542;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2f3542;
+        }
+        
+        input[type="text"], 
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus, 
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #ff6b6b;
+        }
+        
+        .color-input {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        input[type="color"] {
+            width: 60px;
+            height: 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+        }
+        
+        .btn-secondary {
+            background: #f1f2f6;
+            color: #2f3542;
+        }
+        
+        .btn-secondary:hover {
+            background: #ddd;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .collection-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: white;
+        }
+        
+        .collection-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        
+        .add-collection-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .remove-collection-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 GoEye Customization Manager</h1>
+            <p>Update your mobile app customization from the web</p>
+        </div>
+        
+        <div class="content">
+            <form id="customizationForm">
+                <!-- Promotional Banner Section -->
+                <div class="section">
+                    <h3>🎉 Promotional Banner</h3>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showPromotionalBanner" checked>
+                            <label for="showPromotionalBanner">Show Promotional Banner</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="promotionalBannerText">Banner Text</label>
+                        <input type="text" id="promotionalBannerText" value="🎉 Special Offer: 50% Off on Premium Frames!">
+                    </div>
+                    <div class="form-group">
+                        <label for="promotionalBannerBackgroundColor">Background Color</label>
+                        <div class="color-input">
+                            <input type="color" id="promotionalBannerBackgroundColor" value="#ff6b6b">
+                            <span id="promotionalBannerBackgroundColorValue">#ff6b6b</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="promotionalBannerTextColor">Text Color</label>
+                        <div class="color-input">
+                            <input type="color" id="promotionalBannerTextColor" value="#ffffff">
+                            <span id="promotionalBannerTextColorValue">#ffffff</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collections Section -->
+                <div class="section">
+                    <h3>🔥 Collections</h3>
+                    <div class="form-group">
+                        <label for="collectionsSectionTitle">Section Title</label>
+                        <input type="text" id="collectionsSectionTitle" value="Hot Collections">
+                    </div>
+                    <div id="collectionsContainer">
+                        <div class="collection-item">
+                            <button type="button" class="remove-collection-btn" onclick="removeCollection(this)">×</button>
+                            <h4>Collection 1</h4>
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" class="collection-title" value="Summer Collection">
+                            </div>
+                            <div class="form-group">
+                                <label>Subtitle</label>
+                                <input type="text" class="collection-subtitle" value="Trendy frames for sunny days">
+                            </div>
+                            <div class="form-group">
+                                <label>Image URL</label>
+                                <input type="text" class="collection-image" value="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-collection-btn" onclick="addCollection()">+ Add Collection</button>
+                </div>
+
+                <!-- Categories Section -->
+                <div class="section">
+                    <h3>📂 Categories</h3>
+                    <div class="form-group">
+                        <label for="productCategoriesSectionTitle">Section Title</label>
+                        <input type="text" id="productCategoriesSectionTitle" value="Categories">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showProductCategoryCards" checked>
+                            <label for="showProductCategoryCards">Show Category Cards</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eyeglasses Section -->
+                <div class="section">
+                    <h3>👓 Eyeglasses</h3>
+                    <div class="form-group">
+                        <label for="productCategoryCardsTitle">Section Title</label>
+                        <input type="text" id="productCategoryCardsTitle" value="Eyeglasses">
+                    </div>
+                </div>
+
+                <!-- Sunglasses Section -->
+                <div class="section">
+                    <h3>🕶️ Sunglasses</h3>
+                    <div class="form-group">
+                        <label for="sunglassesSectionTitle">Section Title</label>
+                        <input type="text" id="sunglassesSectionTitle" value="Sunglasses">
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" class="btn btn-secondary" onclick="loadCurrentData()">Load Current Data</button>
+                    <button type="button" class="btn btn-primary" onclick="saveCustomization()">Save & Sync to Mobile</button>
+                </div>
+            </form>
+
+            <div id="status" class="status" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Color input handlers
+        document.getElementById('promotionalBannerBackgroundColor').addEventListener('input', function(e) {
+            document.getElementById('promotionalBannerBackgroundColorValue').textContent = e.target.value;
+        });
+        
+        document.getElementById('promotionalBannerTextColor').addEventListener('input', function(e) {
+            document.getElementById('promotionalBannerTextColorValue').textContent = e.target.value;
+        });
+
+        // Collection management
+        function addCollection() {
+            const container = document.getElementById('collectionsContainer');
+            const collectionCount = container.children.length + 1;
+            
+            const collectionDiv = document.createElement('div');
+            collectionDiv.className = 'collection-item';
+            collectionDiv.innerHTML = `
+                <button type="button" class="remove-collection-btn" onclick="removeCollection(this)">×</button>
+                <h4>Collection ${collectionCount}</h4>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="collection-title" value="New Collection">
+                </div>
+                <div class="form-group">
+                    <label>Subtitle</label>
+                    <input type="text" class="collection-subtitle" value="Collection description">
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" class="collection-image" value="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop">
+                </div>
+            `;
+            
+            container.appendChild(collectionDiv);
+        }
+
+        function removeCollection(button) {
+            if (document.querySelectorAll('.collection-item').length > 1) {
+                button.parentElement.remove();
+            }
+        }
+
+        // Convert color hex to integer
+        function hexToInt(hex) {
+            return parseInt(hex.replace('#', ''), 16);
+        }
+
+        // Save customization data
+        async function saveCustomization() {
+            const statusDiv = document.getElementById('status');
+            
+            try {
+                // Gather form data
+                const collections = [];
+                document.querySelectorAll('.collection-item').forEach((item, index) => {
+                    collections.push({
+                        id: (index + 1).toString(),
+                        title: item.querySelector('.collection-title').value,
+                        subtitle: item.querySelector('.collection-subtitle').value,
+                        imagePath: item.querySelector('.collection-image').value,
+                        isVisible: true
+                    });
+                });
+
+                const customizationData = {
+                    showPromotionalBanner: document.getElementById('showPromotionalBanner').checked,
+                    promotionalBannerText: document.getElementById('promotionalBannerText').value,
+                    promotionalBannerBackgroundColor: hexToInt(document.getElementById('promotionalBannerBackgroundColor').value),
+                    promotionalBannerTextColor: hexToInt(document.getElementById('promotionalBannerTextColor').value),
+                    promotionalBannerFontSize: 16.0,
+                    promotionalBannerFontFamily: "Roboto",
+                    headerBackgroundColor: 4294967295,
+                    headerTextColor: 4278190080,
+                    headerIconColor: 4278190080,
+                    headerIconSize: 24.0,
+                    showHeaderLogo: true,
+                    showHeaderIcons: true,
+                    collectionsSectionTitle: document.getElementById('collectionsSectionTitle').value,
+                    collectionsSectionTitleFontSize: 20.0,
+                    collectionsSectionTitleFontFamily: "Roboto",
+                    collections: collections,
+                    productCategoriesSectionTitle: document.getElementById('productCategoriesSectionTitle').value,
+                    productCategoriesSectionTitleFontSize: 20.0,
+                    productCategoriesSectionTitleFontFamily: "Roboto",
+                    productCategories: [
+                        { id: "1", label: "Men", icon: 128104, isVisible: true },
+                        { id: "2", label: "Women", icon: 128105, isVisible: true },
+                        { id: "3", label: "Kids", icon: 128512, isVisible: true },
+                        { id: "4", label: "Essentials", icon: 128717, isVisible: true }
+                    ],
+                    showProductCategoryCards: document.getElementById('showProductCategoryCards').checked,
+                    productCategoryCardsTitle: document.getElementById('productCategoryCardsTitle').value,
+                    productCategoryCardsTitleFontSize: 18.0,
+                    productCategoryCardsTitleFontFamily: "Roboto",
+                    eyeglassesCategoryCards: [
+                        { id: "1", title: "Round Frames", imagePath: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop", isVisible: true },
+                        { id: "2", title: "Square Frames", imagePath: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop", isVisible: true },
+                        { id: "3", title: "Cat Eye", imagePath: "https://images.unsplash.com/photo-1556306535-38febf6782e7?w=150&h=100&fit=crop", isVisible: true }
+                    ],
+                    sunglassesCategoryCards: [
+                        { id: "1", title: "Aviator", imagePath: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop", isVisible: true },
+                        { id: "2", title: "Wayfarer", imagePath: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop", isVisible: true },
+                        { id: "3", title: "Round", imagePath: "https://images.unsplash.com/photo-1556306535-38febf6782e7?w=150&h=100&fit=crop", isVisible: true }
+                    ],
+                    eyeglassesSectionFontSize: 18.0,
+                    eyeglassesSectionFontFamily: "Roboto",
+                    sunglassesSectionFontSize: 18.0,
+                    sunglassesSectionFontFamily: "Roboto",
+                    showVideoCarousel: true,
+                    videoCarouselTitle: "Featured Videos",
+                    videoCarouselTitleFontSize: 18.0,
+                    videoCarouselTitleFontFamily: "Roboto",
+                    videoCarouselVideos: [
+                        { id: "1", title: "How to Choose Perfect Frames", thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop", videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4", isVisible: true }
+                    ],
+                    showTodaysMood: true,
+                    todaysMoodTitle: "Today's Mood",
+                    todaysMoodTitleFontSize: 18.0,
+                    todaysMoodTitleFontFamily: "Roboto",
+                    todaysMoodItems: [
+                        { id: "1", title: "Confident", imagePath: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop", isVisible: true },
+                        { id: "2", title: "Casual", imagePath: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop", isVisible: true }
+                    ],
+                    showMostLoved: true,
+                    mostLovedTitle: "Most Loved",
+                    mostLovedTitleFontSize: 18.0,
+                    mostLovedTitleFontFamily: "Roboto",
+                    mostLovedItems: [
+                        { id: "1", title: "Premium Aviator", imagePath: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop", isVisible: true },
+                        { id: "2", title: "Classic Round", imagePath: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop", isVisible: true }
+                    ],
+                    showInstagramShowcase: true,
+                    instagramShowcaseTitle: "Instagram Showcase",
+                    instagramShowcaseTitleFontSize: 18.0,
+                    instagramShowcaseTitleFontFamily: "Roboto",
+                    instagramShowcaseItems: [
+                        { id: "1", imagePath: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop", isVisible: true },
+                        { id: "2", imagePath: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop", isVisible: true }
+                    ],
+                    showVideoCategories: true,
+                    videoCategoriesTitle: "Video Categories",
+                    videoCategoriesTitleFontSize: 18.0,
+                    videoCategoriesTitleFontFamily: "Roboto",
+                    videoCategories: [
+                        { id: "1", title: "Style Tips", thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop", isVisible: true },
+                        { id: "2", title: "Care Guide", thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop", isVisible: true }
+                    ],
+                    lastUpdated: new Date().toISOString()
+                };
+
+                // Save to localStorage for demo
+                localStorage.setItem('goeye_customization_data', JSON.stringify(customizationData));
+                
+                // Show success message
+                statusDiv.className = 'status success';
+                statusDiv.textContent = '✅ Customization saved! Your mobile app will sync automatically.';
+                statusDiv.style.display = 'block';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                }, 5000);
+
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '❌ Error saving customization: ' + error.message;
+                statusDiv.style.display = 'block';
+            }
+        }
+
+        // Load current data
+        async function loadCurrentData() {
+            const statusDiv = document.getElementById('status');
+            
+            try {
+                // Try to load from localStorage first
+                const savedData = localStorage.getItem('goeye_customization_data');
+                if (savedData) {
+                    const data = JSON.parse(savedData);
+                    
+                    // Populate form fields
+                    document.getElementById('showPromotionalBanner').checked = data.showPromotionalBanner;
+                    document.getElementById('promotionalBannerText').value = data.promotionalBannerText;
+                    document.getElementById('collectionsSectionTitle').value = data.collectionsSectionTitle;
+                    document.getElementById('productCategoriesSectionTitle').value = data.productCategoriesSectionTitle;
+                    document.getElementById('showProductCategoryCards').checked = data.showProductCategoryCards;
+                    document.getElementById('productCategoryCardsTitle').value = data.productCategoryCardsTitle;
+                    
+                    // Load collections
+                    const collectionsContainer = document.getElementById('collectionsContainer');
+                    collectionsContainer.innerHTML = '';
+                    
+                    data.collections.forEach((collection, index) => {
+                        const collectionDiv = document.createElement('div');
+                        collectionDiv.className = 'collection-item';
+                        collectionDiv.innerHTML = `
+                            <button type="button" class="remove-collection-btn" onclick="removeCollection(this)">×</button>
+                            <h4>Collection ${index + 1}</h4>
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" class="collection-title" value="${collection.title}">
+                            </div>
+                            <div class="form-group">
+                                <label>Subtitle</label>
+                                <input type="text" class="collection-subtitle" value="${collection.subtitle}">
+                            </div>
+                            <div class="form-group">
+                                <label>Image URL</label>
+                                <input type="text" class="collection-image" value="${collection.imagePath}">
+                            </div>
+                        `;
+                        collectionsContainer.appendChild(collectionDiv);
+                    });
+                    
+                    statusDiv.className = 'status success';
+                    statusDiv.textContent = '✅ Current data loaded successfully!';
+                    statusDiv.style.display = 'block';
+                } else {
+                    statusDiv.className = 'status error';
+                    statusDiv.textContent = '⚠️ No saved data found. Using default values.';
+                    statusDiv.style.display = 'block';
+                }
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '❌ Error loading data: ' + error.message;
+                statusDiv.style.display = 'block';
+            }
+        }
+
+        // Load data on page load
+        window.addEventListener('load', loadCurrentData);
+    </script>
+</body>
+</html>

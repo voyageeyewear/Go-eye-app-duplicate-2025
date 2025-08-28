@@ -738,6 +738,7 @@ class HeaderCustomizationNotifier extends StateNotifier<HeaderCustomizationState
   void _initializeSync() {
     // Set up callback to reload data when synced
     _syncService.setOnDataSyncedCallback(() {
+      print('🔄 Sync callback triggered - reloading data...');
       reloadFromStorage();
     });
     
@@ -752,6 +753,15 @@ class HeaderCustomizationNotifier extends StateNotifier<HeaderCustomizationState
         print('⚠️ Web backend not available - using local storage only');
       }
     });
+  }
+
+  // Force refresh the UI with latest data
+  Future<void> forceRefresh() async {
+    print('🔄 Force refresh triggered');
+    await reloadFromStorage();
+    // Force a state update to trigger UI rebuild
+    state = state.copyWith();
+    print('✅ Force refresh completed');
   }
 
   // Load saved customization data
@@ -774,7 +784,9 @@ class HeaderCustomizationNotifier extends StateNotifier<HeaderCustomizationState
 
   // Reload data from storage (for sync updates)
   Future<void> reloadFromStorage() async {
+    print('🔄 Reloading data from storage...');
     await _loadCustomizationData();
+    print('✅ Data reloaded from storage');
   }
 
   // Save customization data

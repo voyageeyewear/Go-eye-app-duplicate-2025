@@ -12,6 +12,36 @@ import time
 # Global storage for customization data
 customization_data = {}
 
+# Load initial customization data on startup
+def load_initial_data():
+    global customization_data
+    try:
+        # Try to load from existing file first
+        if os.path.exists('customization_data.json'):
+            with open('customization_data.json', 'r') as f:
+                data = json.load(f)
+                # Check if it's valid customization data (not test data)
+                if 'collections' in data or 'showPromotionalBanner' in data:
+                    customization_data = data
+                    print(f"📂 Loaded existing customization data: {len(customization_data)} items")
+                    return
+        
+        # If no valid data, load from initial file
+        if os.path.exists('initial_customization_data.json'):
+            with open('initial_customization_data.json', 'r') as f:
+                customization_data = json.load(f)
+                # Save to main file
+                with open('customization_data.json', 'w') as f:
+                    json.dump(customization_data, f, indent=2)
+                print(f"📂 Loaded initial customization data: {len(customization_data)} items")
+        else:
+            print("⚠️ No initial customization data found")
+    except Exception as e:
+        print(f"❌ Error loading customization data: {e}")
+
+# Load data on startup
+load_initial_data()
+
 class CustomizationHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         parsed_url = urlparse(self.path)

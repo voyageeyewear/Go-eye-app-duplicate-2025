@@ -6,8 +6,8 @@ import 'package:flutter/foundation.dart';
 import '../providers/header_customization_provider.dart';
 
 class SyncService {
-  // Use your computer's IP address instead of localhost for mobile app
-  static const String _baseUrl = 'https://go-eye-app-duplicate-2025-hp7p6l1u6-voyageeyewears-projects.vercel.app';
+  // Connect to Vercel app for sync
+  static const String _baseUrl = 'https://go-eye-app-duplicate-2025-nz2jzupv5-voyageeyewears-projects.vercel.app';
   static const String _syncEndpoint = '/public/customization-data.json';
   static const Duration _syncInterval = Duration(seconds: 5); // Sync every 5 seconds
   
@@ -24,10 +24,13 @@ class SyncService {
 
   // Start periodic synchronization
   void startSync() {
+    print('🚀 Starting sync service...');
     _syncTimer?.cancel();
     _syncTimer = Timer.periodic(_syncInterval, (timer) {
+      print('⏰ Sync timer triggered');
       _syncCustomizations();
     });
+    print('✅ Sync service started with ${_syncInterval.inSeconds}s interval');
   }
 
   // Stop synchronization
@@ -113,15 +116,23 @@ class SyncService {
     await _syncCustomizations();
   }
 
+  // Force immediate sync for testing
+  Future<void> forceSync() async {
+    print('🔄 Force sync triggered');
+    _isSyncing = false; // Reset sync flag
+    await _syncCustomizations();
+  }
+
   // Check if web backend is available
   Future<bool> isBackendAvailable() async {
     try {
       final response = await _dio.get(
-        '$_baseUrl/health',
-        options: Options(sendTimeout: Duration(seconds: 2), receiveTimeout: Duration(seconds: 2)),
+        '$_baseUrl$_syncEndpoint',
+        options: Options(sendTimeout: Duration(seconds: 5), receiveTimeout: Duration(seconds: 5)),
       );
       return response.statusCode == 200;
     } catch (e) {
+      print('❌ Backend check failed: $e');
       return false;
     }
   }
