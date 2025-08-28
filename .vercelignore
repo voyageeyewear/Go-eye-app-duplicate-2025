@@ -1,6 +1,5 @@
-# Flutter build artifacts (but keep web build)
+# Flutter build artifacts (exclude since we're serving from root)
 build/
-!build/web/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -69,3 +68,7 @@ customization_data.json
 # Documentation
 *.md
 !README.md
+
+# Git
+.git/
+.gitignore
