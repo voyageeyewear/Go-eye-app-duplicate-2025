@@ -1,0 +1,78 @@
+{
+  "headerCustomization": {
+    "logoUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=60&fit=crop",
+    "backgroundColor": "#1a1a1a",
+    "textColor": "#ffffff",
+    "showPromotionalBanner": true,
+    "promotionalBannerText": "🎉 Free Lens with Every Frame! Limited Time Offer",
+    "promotionalBannerBackgroundColor": "#FF6B6B",
+    "promotionalBannerTextColor": "#ffffff"
+  },
+  "collections": [
+    {
+      "id": "1",
+      "title": "Summer Collection",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "2", 
+      "title": "Winter Essentials",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop",
+      "isVisible": true
+    }
+  ],
+  "eyeglassesCategories": [
+    {
+      "id": "1",
+      "title": "Men",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "title": "Women", 
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "title": "Kids",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop", 
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "title": "Essentials",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    }
+  ],
+  "sunglassesCategories": [
+    {
+      "id": "1",
+      "title": "Men",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "2", 
+      "title": "Women",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "title": "Kids", 
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "title": "Essentials",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=120&fit=crop",
+      "isVisible": true
+    }
+  ],
+  "lastUpdated": "2025-08-28T05:45:00.000Z"
+}
