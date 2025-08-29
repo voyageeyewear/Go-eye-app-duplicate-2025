@@ -1,0 +1,13 @@
+{
+    "header": {
+        "backgroundColor": "#FF6B6B",
+        "textColor": "#FFFFFF",
+        "logo": "https://example.com/logo.png"
+    },
+    "searchBar": {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#FF6B6B",
+        "placeholderText": "Search for frames, lenses, ..."
+    },
+    "lastUpdated": "2025-08-29T12:52:00Z"
+}

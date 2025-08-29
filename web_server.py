@@ -63,6 +63,25 @@ class CustomizationHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(customization_data).encode())
             return
             
+        elif path == '/customize':
+            # Serve the customization manager
+            try:
+                with open('local-customization-manager.html', 'r') as f:
+                    content = f.read()
+                
+                self.send_response(200)
+                self.send_header('Content-type', 'text/html')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(content.encode())
+                return
+            except FileNotFoundError:
+                self.send_response(404)
+                self.send_header('Content-type', 'text/plain')
+                self.end_headers()
+                self.wfile.write(b'Customization manager not found')
+                return
+            
         else:
             # Serve static files from build/web directory
             file_path = f'build/web{path}'

@@ -786,7 +786,9 @@ class HeaderCustomizationNotifier extends StateNotifier<HeaderCustomizationState
   Future<void> reloadFromStorage() async {
     print('🔄 Reloading data from storage...');
     await _loadCustomizationData();
-    print('✅ Data reloaded from storage');
+    // Force a state update to trigger UI rebuild
+    state = state.copyWith();
+    print('✅ Data reloaded from storage and UI updated');
   }
 
   // Save customization data

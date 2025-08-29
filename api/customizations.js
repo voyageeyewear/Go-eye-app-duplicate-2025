@@ -16,7 +16,7 @@ try {
   console.log('No existing data file found, starting fresh');
 }
 
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   // Enable CORS for all origins
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -42,7 +42,7 @@ export default function handler(req, res) {
     try {
       const newData = req.body;
       customizationData = newData;
-      
+
       // Save to file (for persistence across deployments)
       try {
         fs.writeFileSync(dataFile, JSON.stringify(customizationData, null, 2));
@@ -50,7 +50,7 @@ export default function handler(req, res) {
       } catch (error) {
         console.log('⚠️ Could not save to file:', error.message);
       }
-      
+
       console.log('✅ Customization data updated:', Object.keys(newData).length, 'items');
       res.status(200).json({ success: true, message: 'Data updated successfully' });
       return;

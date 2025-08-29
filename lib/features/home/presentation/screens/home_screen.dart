@@ -202,38 +202,67 @@ class HomeScreen extends ConsumerWidget {
 
   Widget _buildSearchBar() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      child: Container(
-        height: 48,
-        decoration: BoxDecoration(
-          color: Colors.grey[100],
-          borderRadius: BorderRadius.circular(24),
-          border: Border.all(color: Colors.grey[300]!),
-        ),
-        child: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search for frames, lenses, or brands...',
-            hintStyle: TextStyle(
-              color: Colors.grey[600],
-              fontSize: 14,
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.15),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          const Icon(
+            Icons.search,
+            color: Color(0xFFFF6B6B),
+            size: 28,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: TextField(
+              decoration: const InputDecoration(
+                hintText: '🔍 Search for frames, lenses, or brands...',
+                hintStyle: TextStyle(
+                  color: Color(0xFFFF6B6B),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.zero,
+              ),
+              style: const TextStyle(
+                fontSize: 18,
+                color: Colors.black87,
+                fontWeight: FontWeight.w600,
+              ),
+              onChanged: (value) {
+                // TODO: Implement search functionality
+                print('Search query: $value');
+              },
+              onTap: () {
+                // TODO: Implement search focus functionality
+                print('Search bar tapped');
+              },
             ),
-            prefixIcon: Icon(
-              Icons.search,
-              color: Colors.grey[600],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: const Color(0xFFFF6B6B),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Icon(
+              Icons.mic,
+              color: Colors.white,
               size: 20,
             ),
-            border: InputBorder.none,
-            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           ),
-          style: const TextStyle(
-            fontSize: 14,
-            color: Colors.black87,
-          ),
-          onChanged: (value) {
-            // TODO: Implement search functionality
-            print('Search query: $value');
-          },
-        ),
+        ],
       ),
     );
   }

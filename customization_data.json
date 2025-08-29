@@ -1,24 +1,24 @@
 {
   "showPromotionalBanner": true,
-  "promotionalBannerText": "\ud83d\udd25 HOT DEAL: 70% Off on All Frames! Limited Time!",
-  "promotionalBannerBackgroundColor": 4294198070,
-  "promotionalBannerTextColor": 4294967295,
-  "promotionalBannerFontSize": 16.0,
+  "promotionalBannerText": "\ud83d\udd25 FINAL TEST: 90% Off Everything! \ud83d\udd25",
+  "promotionalBannerBackgroundColor": 16739179,
+  "promotionalBannerTextColor": 16777215,
+  "promotionalBannerFontSize": 16,
   "promotionalBannerFontFamily": "Roboto",
   "headerBackgroundColor": 4294967295,
   "headerTextColor": 4278190080,
   "headerIconColor": 4278190080,
-  "headerIconSize": 24.0,
+  "headerIconSize": 24,
   "showHeaderLogo": true,
   "showHeaderIcons": true,
-  "collectionsSectionTitle": "\ud83d\udd25 HOT Collections",
-  "collectionsSectionTitleFontSize": 20.0,
+  "collectionsSectionTitle": "\ud83d\udd25 FINAL Collections",
+  "collectionsSectionTitleFontSize": 20,
   "collectionsSectionTitleFontFamily": "Roboto",
   "collections": [
     {
       "id": "1",
-      "title": "\ud83d\udd25 Summer Collection UPDATED",
-      "subtitle": "\ud83d\udd25 Trendy frames for sunny days - UPDATED!",
+      "title": "\ud83d\udd25 FINAL Collection",
+      "subtitle": "\ud83d\udd25 This is a FINAL test!",
       "imagePath": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop",
       "isVisible": true
     },
@@ -38,7 +38,7 @@
     }
   ],
   "productCategoriesSectionTitle": "Categories",
-  "productCategoriesSectionTitleFontSize": 20.0,
+  "productCategoriesSectionTitleFontSize": 20,
   "productCategoriesSectionTitleFontFamily": "Roboto",
   "productCategories": [
     {
@@ -68,7 +68,7 @@
   ],
   "showProductCategoryCards": true,
   "productCategoryCardsTitle": "Eyeglasses",
-  "productCategoryCardsTitleFontSize": 18.0,
+  "productCategoryCardsTitleFontSize": 18,
   "productCategoryCardsTitleFontFamily": "Roboto",
   "eyeglassesCategoryCards": [
     {
@@ -110,13 +110,13 @@
       "isVisible": true
     }
   ],
-  "eyeglassesSectionFontSize": 18.0,
+  "eyeglassesSectionFontSize": 18,
   "eyeglassesSectionFontFamily": "Roboto",
-  "sunglassesSectionFontSize": 18.0,
+  "sunglassesSectionFontSize": 18,
   "sunglassesSectionFontFamily": "Roboto",
   "showVideoCarousel": true,
   "videoCarouselTitle": "Featured Videos",
-  "videoCarouselTitleFontSize": 18.0,
+  "videoCarouselTitleFontSize": 18,
   "videoCarouselTitleFontFamily": "Roboto",
   "videoCarouselVideos": [
     {
@@ -129,7 +129,7 @@
   ],
   "showTodaysMood": true,
   "todaysMoodTitle": "Today's Mood",
-  "todaysMoodTitleFontSize": 18.0,
+  "todaysMoodTitleFontSize": 18,
   "todaysMoodTitleFontFamily": "Roboto",
   "todaysMoodItems": [
     {
@@ -147,7 +147,7 @@
   ],
   "showMostLoved": true,
   "mostLovedTitle": "Most Loved",
-  "mostLovedTitleFontSize": 18.0,
+  "mostLovedTitleFontSize": 18,
   "mostLovedTitleFontFamily": "Roboto",
   "mostLovedItems": [
     {
@@ -165,7 +165,7 @@
   ],
   "showInstagramShowcase": true,
   "instagramShowcaseTitle": "Instagram Showcase",
-  "instagramShowcaseTitleFontSize": 18.0,
+  "instagramShowcaseTitleFontSize": 18,
   "instagramShowcaseTitleFontFamily": "Roboto",
   "instagramShowcaseItems": [
     {
@@ -181,7 +181,7 @@
   ],
   "showVideoCategories": true,
   "videoCategoriesTitle": "Video Categories",
-  "videoCategoriesTitleFontSize": 18.0,
+  "videoCategoriesTitleFontSize": 18,
   "videoCategoriesTitleFontFamily": "Roboto",
   "videoCategories": [
     {
@@ -196,5 +196,6 @@
       "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=100&fit=crop",
       "isVisible": true
     }
-  ]
+  ],
+  "lastUpdated": "2025-08-28T08:59:42.844Z"
 }
